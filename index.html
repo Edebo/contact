@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1 class="head-title">Contact Form</h1>
+
+    <div class="wrapper">
+      <form action="process.php" method="POST" id="contact">
+        <div class="field">
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Who are you?"
+            autofocus
+          />
+          <label for="name">Name</label>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            placeholder="Your phone number"
+            pattern="^[0][789][01]\d{8}$"
+            autofocus
+          />
+          <label for="name">Phone number</label>
+        </div>
+        <div class="field">
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="name@domain.tld"
+          />
+          <label for="email">E-Mail</label>
+        </div>
+        <div class="field">
+          <textarea
+            id="msg"
+            rows="4"
+            name="msg"
+            placeholder="You message..."
+          ></textarea>
+          <label for="msg">Message</label>
+        </div>
+        <input class="button" type="submit" value="Send" name="submit" />
+      </form>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
